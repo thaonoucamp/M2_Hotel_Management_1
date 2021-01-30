@@ -3,12 +3,12 @@ package Hotel_Management;
 public class Person {
     private String name;
     private int birtDay;
-    private int identity;
+    private String identity;
 
     public Person() {
     }
 
-    public Person(String name, int birtDay, int identity) {
+    public Person(String name, int birtDay, String identity) {
         this.name = name;
         this.birtDay = birtDay;
         this.identity = identity;
@@ -30,11 +30,11 @@ public class Person {
         this.birtDay = birtDay;
     }
 
-    public int getIdentity() {
+    public String getIdentity() {
         return identity;
     }
 
-    public void setIdentity(int identity) {
+    public void setIdentity(String identity) {
         this.identity = identity;
     }
 
