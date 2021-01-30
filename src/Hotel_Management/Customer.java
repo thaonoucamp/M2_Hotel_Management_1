@@ -1,47 +1,56 @@
 package Hotel_Management;
 
 public class Customer extends Person{
-    private int day;
-    private String typeRoom;
-    private double price;
+    private int telephone;
+    private int typeRoom;
+    private int dayCheckIn;
 
     public Customer() {
     }
 
-    public Customer(int day, String typeRoom, double price) {
-        this.day = day;
+    public Customer(int telephone, int typeRoom, int dayCheckIn) {
+        this.telephone = telephone;
         this.typeRoom = typeRoom;
-        this.price = price;
+        this.dayCheckIn = dayCheckIn;
     }
 
-    public Customer(String name, int birtDay, int identity, int day, String typeRoom, double price) {
-        super(name, birtDay, identity);
-        this.day = day;
+    public Customer(String name, String birtDay, String gen, int identity, int telephone, int typeRoom, int dayCheckIn) {
+        super(name, birtDay, gen, identity);
+        this.telephone = telephone;
         this.typeRoom = typeRoom;
-        this.price = price;
+        this.dayCheckIn = dayCheckIn;
     }
 
-    public int getDay() {
-        return day;
+    public int getTelephone() {
+        return telephone;
     }
 
-    public void setDay(int day) {
-        this.day = day;
+    public void setTelephone(int telephone) {
+        this.telephone = telephone;
     }
 
-    public String getTypeRoom() {
+    public int getTypeRoom() {
         return typeRoom;
     }
 
-    public void setTypeRoom(String typeRoom) {
+    public void setTypeRoom(int typeRoom) {
         this.typeRoom = typeRoom;
     }
 
-    public double getPrice() {
-        return price;
+    public int getDayCheckIn() {
+        return dayCheckIn;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setDayCheckIn(int dayCheckIn) {
+        this.dayCheckIn = dayCheckIn;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Customer{" +
+                "telephone=" + telephone +
+                ", typeRoom='" + typeRoom + '\'' +
+                ", dayCheckIn='" + dayCheckIn + '\'' +
+                '}';
     }
 }

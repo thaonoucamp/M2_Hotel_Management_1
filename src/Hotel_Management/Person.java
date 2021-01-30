@@ -2,15 +2,17 @@ package Hotel_Management;
 
 public class Person {
     private String name;
-    private int birtDay;
-    private String identity;
+    private String birtDay;
+    private String gen;
+    private int identity;
 
     public Person() {
     }
 
-    public Person(String name, int birtDay, String identity) {
+    public Person(String name, String birtDay, String gen, int identity) {
         this.name = name;
         this.birtDay = birtDay;
+        this.gen = gen;
         this.identity = identity;
     }
 
@@ -22,19 +24,27 @@ public class Person {
         this.name = name;
     }
 
-    public int getBirtDay() {
+    public String getBirtDay() {
         return birtDay;
     }
 
-    public void setBirtDay(int birtDay) {
+    public void setBirtDay(String birtDay) {
         this.birtDay = birtDay;
     }
 
-    public String getIdentity() {
+    public String getGen() {
+        return gen;
+    }
+
+    public void setGen(String gen) {
+        this.gen = gen;
+    }
+
+    public int getIdentity() {
         return identity;
     }
 
-    public void setIdentity(String identity) {
+    public void setIdentity(int identity) {
         this.identity = identity;
     }
 
@@ -42,8 +52,9 @@ public class Person {
     public String toString() {
         return "Person{" +
                 "name='" + name + '\'' +
-                ", birtDay=" + birtDay +
-                ", identity=" + identity +
+                ", birtDay='" + birtDay + '\'' +
+                ", gen='" + gen + '\'' +
+                ", identity='" + identity + '\'' +
                 '}';
     }
 }
