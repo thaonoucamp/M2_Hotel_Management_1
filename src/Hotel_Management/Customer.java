@@ -1,56 +1,48 @@
 package Hotel_Management;
 
 public class Customer extends Person{
-    private int telephone;
-    private int typeRoom;
-    private int dayCheckIn;
+    private int phoneNumber;
+    private int daysRent;
 
     public Customer() {
     }
 
-    public Customer(int telephone, int typeRoom, int dayCheckIn) {
-        this.telephone = telephone;
-        this.typeRoom = typeRoom;
-        this.dayCheckIn = dayCheckIn;
+    public Customer(String name, int identity, String birtDay, String gen) {
+        super(name, identity, birtDay, gen);
     }
 
-    public Customer(String name, String birtDay, String gen, int identity, int telephone, int typeRoom, int dayCheckIn) {
-        super(name, birtDay, gen, identity);
-        this.telephone = telephone;
-        this.typeRoom = typeRoom;
-        this.dayCheckIn = dayCheckIn;
+    public Customer(int phoneNumber, int daysRent) {
+        this.phoneNumber = phoneNumber;
+        this.daysRent = daysRent;
     }
 
-    public int getTelephone() {
-        return telephone;
+    public Customer(String name, int identity, String birtDay, String gen, int phoneNumber, int daysRent) {
+        super(name, identity, birtDay, gen);
+        this.phoneNumber = phoneNumber;
+        this.daysRent = daysRent;
     }
 
-    public void setTelephone(int telephone) {
-        this.telephone = telephone;
+    public int getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public int getTypeRoom() {
-        return typeRoom;
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public void setTypeRoom(int typeRoom) {
-        this.typeRoom = typeRoom;
+    public int getDaysRent() {
+        return daysRent;
     }
 
-    public int getDayCheckIn() {
-        return dayCheckIn;
-    }
-
-    public void setDayCheckIn(int dayCheckIn) {
-        this.dayCheckIn = dayCheckIn;
+    public void setDaysRent(int daysRent) {
+        this.daysRent = daysRent;
     }
 
     @Override
     public String toString() {
         return super.toString() + "Customer{" +
-                "telephone=" + telephone +
-                ", typeRoom='" + typeRoom + '\'' +
-                ", dayCheckIn='" + dayCheckIn + '\'' +
+                "phoneNumber=" + phoneNumber +
+                ", daysRent=" + daysRent +
                 '}';
     }
 }
